@@ -3,7 +3,8 @@ import {
   cmdDeviceDesktop,
   cmdDeviceTablet,
   cmdDeviceMobile,
-  cmdClear
+  cmdClear,
+  cmdSave,
 } from './../consts';
 
 export default (editor, config) => {
@@ -28,6 +29,11 @@ export default (editor, config) => {
   },{
     id: 'options',
     buttons: [{
+      id: cmdSave,
+      command:  e => e.runCommand(cmdSave),
+      className: 'fa fa-save',
+    },
+    {
       id: swv,
       command: swv,
       context: swv,

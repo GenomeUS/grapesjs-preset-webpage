@@ -4,7 +4,8 @@ import {
   cmdDeviceDesktop,
   cmdDeviceTablet,
   cmdDeviceMobile,
-  cmdClear
+  cmdClear,
+  cmdSave,
 } from './../consts';
 
 export default (editor, config) => {
@@ -16,4 +17,10 @@ export default (editor, config) => {
   cm.add(cmdDeviceTablet, e => e.setDevice('Tablet'));
   cm.add(cmdDeviceMobile, e => e.setDevice('Mobile portrait'));
   cm.add(cmdClear, e => confirm(txtConfirm) && e.runCommand('core:canvas-clear'));
+  cm.add(cmdSave, {
+    run() {
+    },
+    stop() {
+    }
+  });
 }

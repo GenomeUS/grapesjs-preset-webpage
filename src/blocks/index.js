@@ -37,4 +37,13 @@ export default (editor, config) => {
       <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
       </section>`
   });
+
+  bm.add('text-basic2', {
+    category: 'Custom',
+    label: 'Text section',
+    attributes: { class: 'gjs-fonts gjs-f-h1p' },
+    content: `<section class="bdg-sect">
+      <h1 class="heading">This is a custom component</h1>
+      </section>`
+  });
 }
